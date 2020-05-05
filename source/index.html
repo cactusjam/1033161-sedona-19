@@ -9,88 +9,86 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="">Главная</a>
-          <button><span class="visually-hidden">Закрыть</span></button>
+  <header class="page-header container">
+    <nav class="page-header__nav">
+      <ul class="page-header__list page-header__list--nojs">
+        <li class="page-header__item">
+          <a class="page-header__link" href="">Главная</a>
+          <button class="page-header__btn page-header__btn--closed"><span
+              class="visually-hidden">Закрыть</span></button>
         </li>
-        <li>
-          <a href="">Фото и видео</a></li>
-        <li>
-          <a href="">Форма отзыва</a>
+        <li class="page-header__item">
+          <a class="page-header__link" href="">Фото и видео</a></li>
+        <li class="page-header__item">
+          <a class="page-header__link" href="">Форма отзыва</a>
         </li>
-        <li>
-          <a href="">Форма отзыва</a>
+        <li class="page-header__item">
+          <a class="page-header__link" href="">Форма отзыва</a>
         </li>
       </ul>
-      <div>
-        <a>Логотип</a>
-        <button><span class="visually-hidden">Открыть</span></button>
-      </div>
     </nav>
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo-link">Логотип</a>
+      <button class="page-header__btn page-header__btn--open"><span class="visually-hidden">Открыть</span></button>
+      <img src="" alt="">
+    </div>
   </header>
 
-  <main>
-    <div></div>
-    <div>
-      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-    </div>
-    <section>
-      <div>
-        <h2>Настоящий городок</h2>
-        <p>— №1 —</p>
+  <main class="page-main">
+    <section class="page-entry">
+      <h1 class="page-entry__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p class="page-entry__content">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </section>
+    <section class="advantages">
+      <div class="advantages__list">
+        <h2 class="advantages__list-title">Настоящий городок</h2>
+        <span>— №1 —</span>
         <p>Седона не атракцион для туристов, там течет своя жизнь</p>
       </div>
-      <div>
-        <ul>
-          <li>
+      <div class="advantages__recommend">
+        <ul class="advantages__recommend-list">
+          <li class="advantages__recommend-item">
             <h2>Жилье</h2>
-            <span>Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
-          <li>
+          <li class="advantages__recommend-item">
             <h2>Суверины</h2>
-            <span>Не только китайского, но и местного производства!</span>
+            <p>Не только китайского, но и местного производства!</p>
           </li>
-          <li>
+          <li class="advantages__recommend-item">
             <h2>Еда</h2>
-            <span>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</span>
+            <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </li>
         </ul>
       </div>
-    </section>
-    <section>
-      <div>
-        <h2>там есть Мост дьявола</h2>
-        <p>— №2 —</p>
+      <div class="advantages__list">
+        <h2 class="advantages__list-title">там есть Мост дьявола</h2>
+        <span>— №2 —</span>
         <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
-      <ul>
-        <li>
-          <h2>Небольшая площадь</h2>
-          <p>— №3 —</p>
-          <p>Все интересные места находятся очень близко</p>
-        </li>
-        <li>
-          <h2>Красивая дорога</h2>
-          <p>— №4 —</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </li>
-        <li>
-          <h2>Мало туристов</h2>
-          <p>— №5 —</p>
-          <p>Большинство едет в гранд каньон и толпится там</p>
-        </li>
-      </ul>
-    </section>
-    <div>
-      <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <button>Найти гостиницу</button>
-    </div>
-    <section></section>
+      <div class="advantages__list">
+        <h2 class="advantages__list-title">Небольшая площадь</h2>
+        <span>— №3 —</span>
+        <p>Все интересные места находятся очень близко</p>
+      </div>
+      <div class="advantages__list">
+        <h2 class="advantages__list-title">Красивая дорога</h2>
+        <span>— №4 —</span>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+      <div class="advantages__list">
+        <h2 class="advantages__list-title">Мало туристов</h2>
+        <span>— №5 —</span>
+        <p>Большинство едет в гранд каньон и толпится там</p>
+      </div>
+      <div class="reservation">
+        <h2 class="reservation__title">Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button class="reservation__btn">Найти гостиницу</button>
+      </div>
+      <section class="map">
+        <h2 class="visually-hidden">Карта города</h2>
+      </section>
   </main>
   <footer>
     <p>#visitsedona</p>
