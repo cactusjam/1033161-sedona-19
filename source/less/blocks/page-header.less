@@ -1,0 +1,109 @@
+.page-header__list {
+  background-color: @light-grey-blue;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__item {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  box-shadow: inset 0 -1px 0 #678fa8, inset 0 1px 0 #9ac2db;
+
+  &:last-child {
+    box-shadow: inset 0 1px 0 #9ac2db, inset 0 -5px 12px -10px @black;
+  }
+}
+
+.page-header__link {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  color: @white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding-top: 7px;
+  padding-bottom: 8px;
+
+  display: block;
+}
+
+.page-header__btn {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 22px;
+  height: 23px;
+  border: 0;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.page-header--opened .page-header__btn--closed::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.page-header--closed .page-header__btn--opened::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.page-header__logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.page-header__logo-img {
+  width: 102px;
+  height: 83px;
+  display: block;
+}
+
+.page-header__logo-link {
+  display: block;
+}
+
+.page-header__image {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 389px;
+  margin-top: -27px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 26px;
+    bottom: 0;
+  }
+}
+
+.page-header__image-img {
+  display: block;
+  margin: auto;
+  transform: translateY(82px);
+}
