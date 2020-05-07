@@ -2,8 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.page-footer.container {
   padding-top: 30px;
   padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .page-footer__header {
@@ -41,11 +46,23 @@
   left: 50%;
   top: 50%;
   fill: @white;
-  transform: translate(-8px, 10px);
+  transform: translate(-8px, -7px);
 }
 
 .page-footer__copiright-link {
   text-decoration: none;
   color: @black;
   text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-footer__copiright-inc {
+  transform: translateY(13px);
+}
+
+.page-footer__copiright-text {
+  text-transform: uppercase;
+  line-height: 26px;
+  margin-right: 10px;
 }

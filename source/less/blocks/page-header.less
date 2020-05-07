@@ -107,3 +107,13 @@
   margin: auto;
   transform: translateY(82px);
 }
+
+@media (max-width: @mobile-max-width) {
+  .page-header--closed .page-header__list {
+    display: none;
+  }
+
+  .page-header--nojs .page-header__btn {
+    display: none;
+  }
+}
