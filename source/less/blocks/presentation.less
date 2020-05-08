@@ -63,3 +63,57 @@
 .presentation__video-text {
   color: @gray;
 }
+
+.presentation__video-controls {
+  margin: -52px 20px 0;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.presentation__video-slide {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 45px;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    right: 22px;
+    height: 3px;
+    background-color: rgba(225, 225, 255, 0.3);
+    cursor: pointer;
+    width: 235px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 58px;
+    width: 9px;
+    height: 9px;
+    margin-top: -3px;
+    border-radius: 50%;
+    background-color: @white;
+    cursor: pointer;
+  }
+}
+
+.presentation__video-btn {
+  border: none;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+
+  &--replay {
+    margin-right: auto;
+  }
+
+  &--screen {
+    padding-right: 25px;
+  }
+}
