@@ -1,17 +1,3 @@
-.advantages {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/bg-triangle.svg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 37px;
-    top: 0;
-  }
-}
-
 .advantages__wrapper {
   background-color: @light-grey-blue;
   color: @white;
@@ -21,6 +7,17 @@
     color: @black;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
@@ -34,16 +31,44 @@
 
   &:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
   }
 
   &--city {
     padding-top: 60px;
     padding-bottom: 45px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 47px;
+      padding-right: 47px;
+      padding-top: 46px;
+      padding-bottom: 0;
+      width: calc(100% / 3 * 1 - 94px);
+    }
   }
 
   &--bridge {
     padding-top: 45px;
     padding-bottom: 45px;
+
+    @media (min-width: @tablet-width) {
+      order: 1;
+      padding-left: 47px;
+      padding-right: 47px;
+      width: calc(100% / 3 * 1 - 94px);
+      padding-bottom: 0;
+    }
+  }
+
+  &--gray {
+    @media (min-width: @tablet-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+      width: calc(100% / 3 * 1 - 100px);
+    }
   }
 }
 
@@ -53,15 +78,15 @@
   line-height: 21px;
 }
 
-// .advantages__list span {
-
-// }
-
 .advantages__list-title {
   margin: 0;
   font-size: 18px;
   line-height: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages__recommend-list {
@@ -71,6 +96,13 @@
   margin-bottom: 40px;
   margin-top: 15px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-left: 0;
+  }
 }
 
 .advantages__recommend-item {
@@ -81,6 +113,31 @@
 
   &:not(:first-child) {
     margin-top: 15px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 * 1);
+    padding-left: 0;
+    padding-top: 60px;
+
+    &--house {
+      order: 1;
+    }
+
+    &--food {
+      order: 2;
+    }
+
+    &--gift {
+      order: 3;
+    }
   }
 }
 
@@ -91,12 +148,21 @@
   &--gray {
     color: @gray;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    text-align: center;
+  }
 }
 
 .advantages__img {
   width: 100%;
   height: 260px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+  }
 }
 
 .advantages__recommend-title {
@@ -104,6 +170,12 @@
   font-size: 18px;
   font-style: 700;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 33px;
+  }
 }
 
 .advantages__recommend-icon {
@@ -111,4 +183,23 @@
   position: absolute;
   left: 0;
   top: 0;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    &--house {
+      width: 75px;
+      height: 72px;
+    }
+
+    &--gift {
+      width: 64px;
+      height: 75px;
+    }
+
+    &--food {
+      width: 77px;
+      height: 68px;
+    }
+  }
 }

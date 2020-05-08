@@ -6,6 +6,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    background-image: url( "js/pixel-glass/img/sedona-index-mobile.png" );
+  }
+
+  @media ( min-width: 768px ) {
+    HTML {
+      background-image: url( "js/pixel-glass/img/sedona-index-tablet.png" );
+    }
+  }
+  @media ( min-width: 1200px ) {
+    HTML {
+      background-image: url( "js/pixel-glass/img/sedona-index-desktop.png" );
+    }
+  }
+</style>
+<link href="js/pixel-glass/styles.css" rel="stylesheet">
+<script src="js/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -67,8 +90,8 @@
       </div>
       <div class="advantages__recommend">
         <ul class="advantages__recommend-list">
-          <li class="advantages__recommend-item">
-            <svg class="advantages__recommend-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          <li class="advantages__recommend-item advantages__recommend-item--house">
+            <svg class="advantages__recommend-icon advantages__recommend-icon--house" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37px" height="36px"
               viewBox="0 0 74.695 72.346" enable-background="new 0 0 74.695 72.346" xml:space="preserve">
               <g>
@@ -90,8 +113,8 @@
             <h2 class="advantages__recommend-title">Жилье</h2>
             <p class="advantages__recommend-text advantages__recommend-text--gray">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
-          <li class="advantages__recommend-item">
-            <svg class="advantages__recommend-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          <li class="advantages__recommend-item advantages__recommend-item--gift">
+            <svg class="advantages__recommend-icon advantages__recommend-icon--gift" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="38px"
               viewBox="0 0 63 75.084" enable-background="new 0 0 63 75.084" xml:space="preserve">
               <path
@@ -100,8 +123,8 @@
             <h2 class="advantages__recommend-title">Суверины</h2>
             <p class="advantages__recommend-text advantages__recommend-text--gray">Не только китайского, но и местного производства!</p>
           </li>
-          <li class="advantages__recommend-item">
-            <svg class="advantages__recommend-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          <li class="advantages__recommend-item advantages__recommend-item--food">
+            <svg class="advantages__recommend-icon advantages__recommend-icon--food" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="35px"
               viewBox="0 0 76.166 68.959" enable-background="new 0 0 76.166 68.959" xml:space="preserve">
               <g>
@@ -135,17 +158,17 @@
         </picture>
       </div>
       <div class="advantages__wrapper--gray">
-        <div class="advantages__list advantages__list">
+        <div class="advantages__list advantages__list--gray">
           <h2 class="advantages__list-title">Небольшая площадь</h2>
           <span>— №3 —</span>
           <p class="advantages__recommend-text advantages__recommend-text--gray">Все интересные места находятся очень близко</p>
         </div>
-        <div class="advantages__list">
+        <div class="advantages__list advantages__list--gray">
           <h2 class="advantages__list-title">Красивая дорога</h2>
           <span>— №4 —</span>
-          <p class="advantages__recommend-text advantages__recommend-text--gray">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="advantages__recommend-text advantages__recommend-text--gray">Ехать в Седону из Лас-&nbspВегаса совсем не скучно!</p>
         </div>
-        <div class="advantages__list">
+        <div class="advantages__list advantages__list--gray">
           <h2 class="advantages__list-title">Мало туристов</h2>
           <span>— №5 —</span>
           <p class="advantages__recommend-text advantages__recommend-text--gray">Большинство едет в гранд каньон и толпится там</p>
