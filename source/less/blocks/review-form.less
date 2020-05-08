@@ -146,12 +146,15 @@
   }
 }
 
-.review-form__radio:checked + &::after,
-.review-form__check:checked + &::after {
+.review-form__radio:checked+&::after,
+.review-form__check:checked+&::after {
   display: block;
 }
 
 .review-form__textarea {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
   min-height: 160px;
   padding-left: 20px;
   padding-top: 20px;
