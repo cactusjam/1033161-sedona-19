@@ -1,7 +1,52 @@
+.review-form {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
 .review-form__block {
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+    padding: 0;
+    box-sizing: border-box;
+
+    &--impression {
+      order: 1;
+      box-shadow: 1px 0 0 0 #ececec;
+      width: 50%;
+    }
+
+    &--identification {
+      order: 2;
+      width: 50%;
+      padding-left: 57px;
+    }
+
+    &--contacts {
+      order: 3;
+      width: 100%;
+      margin-top: 75px;
+    }
+
+    &--place {
+      order: 4;
+      width: 100%;
+      padding-left: 95px;
+      padding-right: 95px;
+    }
+
+    &--emotions {
+      order: 5;
+      width: 100%;
+    }
+  }
 }
 
 .review-form__title {
@@ -10,6 +55,21 @@
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 55px;
+
+    &--identification {
+      text-align: start;
+    }
+
+    &--impression {
+      text-align: start;
+    }
+  }
 }
 
 .review-form__list {
@@ -33,6 +93,14 @@
 
   &--place {
     min-height: 56px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -144,6 +212,18 @@
       display: none;
     }
   }
+
+  &--cont {
+    text-transform: uppercase;
+    line-height: 26px;
+    color: @gray;
+  }
+
+  &--mail {
+    text-transform: uppercase;
+    line-height: 26px;
+    color: @gray;
+  }
 }
 
 .review-form__radio:checked + &::after,
@@ -156,6 +236,7 @@
   line-height: 26px;
   font-weight: 700;
   min-height: 160px;
+  padding: 0;
   padding-left: 20px;
   padding-top: 20px;
   width: 100%;
@@ -189,4 +270,30 @@
   cursor: pointer;
   border: none;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.review-form__message {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 50%;
+    text-align: right;
+    align-self: center;
+  }
+}
+
+.review-form__bottom-wrapper {
+  @media (min-width: @tablet-width) {
+    order: 6;
+    display: flex;
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 61px;
+  }
 }

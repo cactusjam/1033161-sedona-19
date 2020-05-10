@@ -9,12 +9,22 @@
   &--mistake {
     padding-bottom: 35px;
     display: none;
+
+    @media (min-width: @tablet-width) {
+      width: 400px;
+      min-height: 347px;
+    }
   }
 
   &--done {
     background-color: #f2f2f2;
     padding-bottom: 20px;
     display: none;
+
+    @media (min-width: @tablet-width) {
+      width: 640px;
+      min-height: 347px;
+    }
   }
 }
 
@@ -30,6 +40,11 @@
   text-align: center;
   margin: 0;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .popup__text {
@@ -47,10 +62,19 @@
   &--done {
     padding-top: 49px;
     padding-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 64px;
+      padding-left: 91px;
+      padding-right: 91px;
+      padding-bottom: 44px;
+    }
   }
 
   &--mistake {
     padding-top: 43px;
+    padding-left: 61px;
+    padding-right: 61px;
   }
 }
 
@@ -70,6 +94,17 @@
   display: block;
   margin-top: 30px;
   cursor: pointer;
+
+  @min-width: @tablet-width {
+    font-size: 21px;
+  }
+
+  &--close {
+    @media (min-width: @tablet-width) {
+      width: 458px;
+      margin-top: 44px;
+    }
+  }
 }
 
 .popup__invalid {
