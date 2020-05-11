@@ -6,6 +6,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("js/pixel-glass/img/sedona-form-mobile.png");
+    }
+
+    @media (min-width: 768px) {
+      HTML {
+        background-image: url("js/pixel-glass/img/sedona-form-tablet.png");
+      }
+    }
+
+    @media (min-width: 1200px) {
+      HTML {
+        background-image: url("js/pixel-glass/img/sedona-form-desktop.png");
+      }
+    }
+
+  </style>
+  <link href="js/pixel-glass/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -79,7 +104,7 @@
           <h2 class="review-form__title">Контактная информация:</h2>
           <ul class="review-form__list review-form__list--contacts">
             <li class="review-form__item review-form__item--contacts">
-              <label class="review-form__label review-form__label--cont" for="tel">Контактный телефон*:</label>
+              <label class="review-form__label review-form__label--cont" for="tel"><span class="review-form__span review-form__span--hidden">Контактный</span> телефон*:</label>
               <input class="review-form__input" type="tel" id="tel" name="user_tel" pattern="[78][0-9]{10}"
                 placeholder="Введите телефон" required>
               <svg class="review-form__icon review-form__icon--tel" version="1.0" id="Layer_1"
@@ -96,7 +121,7 @@
               </svg>
             </li>
             <li class="review-form__item review-form__item--contacts">
-              <label class="review-form__label review-form__label--mail" for="mail">Электронная почта*:</label>
+              <label class="review-form__label review-form__label--mail" for="mail">Электронная&nbsp;почта*:</label>
               <input class="review-form__input" type="email" id="mail" name="user_mail" placeholder="Введите e-mail"
                 required>
               <svg class="review-form__icon review-form__icon-mail" version="1.1" id="Layer_1"

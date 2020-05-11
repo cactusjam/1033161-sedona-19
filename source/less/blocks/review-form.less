@@ -5,6 +5,11 @@
     padding-left: 60px;
     padding-right: 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .review-form__block {
@@ -27,6 +32,10 @@
       order: 2;
       width: 50%;
       padding-left: 57px;
+
+      @media (min-width: @desktop-width) {
+        padding-left: 80px;
+      }
     }
 
     &--contacts {
@@ -40,6 +49,10 @@
       width: 100%;
       padding-left: 95px;
       padding-right: 95px;
+
+      @media (min-width: @desktop-width) {
+        padding: 0;
+      }
     }
 
     &--emotions {
@@ -68,6 +81,10 @@
 
     &--impression {
       text-align: start;
+
+      @media (min-width: @desktop-width) {
+        padding-left: 80px;
+      }
     }
   }
 }
@@ -75,12 +92,33 @@
 .review-form__list {
   margin: 0;
   padding: 0;
+
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+
+  &--place {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .review-form__item {
   list-style: none;
   margin-bottom: 15px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 
   &--identification {
     display: flex;
@@ -93,13 +131,24 @@
 
   &--place {
     min-height: 56px;
+
+    @media (min-width: @desktop-width) {
+      &:not(:nth-child(4n)) {
+        margin-right: 70px;
+      }
+    }
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      box-sizing: border-box;
+      width: 50%;
+      margin-bottom: 0;
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+      &:first-child {
+        padding-right: 79px;
+      }
     }
   }
 }
@@ -132,6 +181,10 @@
 
   &--tel {
     padding: 20px 21px 20px 19px;
+
+    @media (min-width: @desktop-width) {
+      right: 79px;
+    }
   }
 
   &-mail {
@@ -217,12 +270,22 @@
     text-transform: uppercase;
     line-height: 26px;
     color: @gray;
+
+    @media (min-width: @desktop-width) {
+      align-self: center;
+      margin-right: 16px;
+    }
   }
 
   &--mail {
     text-transform: uppercase;
     line-height: 26px;
     color: @gray;
+
+    @media (min-width: @desktop-width) {
+      align-self: center;
+      margin-right: 16px;
+    }
   }
 }
 
@@ -295,5 +358,13 @@
     width: 100%;
     margin-top: 58px;
     margin-bottom: 61px;
+  }
+}
+
+.review-form__span {
+  &--hidden {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 }
