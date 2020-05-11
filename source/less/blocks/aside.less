@@ -23,6 +23,7 @@
     @media (min-width: @desktop-width) {
       padding-left: 371px;
       padding-right: 371px;
+      padding-bottom: 66px;
     }
   }
 
@@ -36,22 +37,31 @@
 }
 
 .aside__title {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 26px;
 
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    margin-bottom: 31px;
   }
 }
 
 .aside__slogan {
   color: @gray;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
+  }
 
   &--catalog {
     margin-bottom: 0;
@@ -69,7 +79,7 @@
 }
 
 .aside__btn {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
   color: @white;
   text-transform: uppercase;
@@ -82,6 +92,7 @@
   width: 100%;
   border: none;
   cursor: pointer;
+  font-family: @font-family-base;
 
   @media (min-width: @tablet-width) {
     width: 458px;
