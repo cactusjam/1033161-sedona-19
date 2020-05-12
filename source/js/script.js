@@ -1,31 +1,31 @@
-var navHead = document.querySelector('.page-header__nav');
-var btnClose = document.querySelector('.page-header__btn--closed');
-var btnOpen = document.querySelector('.page-header__btn--opened');
+var navHead = document.querySelector(".page-header__nav");
+var btnClose = document.querySelector(".page-header__btn--closed");
+var btnOpen = document.querySelector(".page-header__btn--opened");
 
 
 // ----- меню в шапке-----
 
-navHead.classList.remove('page-header--nojs');
+navHead.classList.remove("page-header--nojs");
 
-btnClose.addEventListener('click', function () {
-  if (navHead.classList.contains('page-header--closed')) {
-    navHead.classList.remove('page-header--closed');
-    navHead.classList.add('page-header--opened');
+btnClose.addEventListener("click", function () {
+  if (navHead.classList.contains("page-header--closed")) {
+    navHead.classList.remove("page-header--closed");
+    navHead.classList.add("page-header--opened");
   } else {
-    navHead.classList.add('page-header--closed');
-    navHead.classList.remove('page-header--opened');
-    btnOpen.style.display='block';
+    navHead.classList.add("page-header--closed");
+    navHead.classList.remove("page-header--opened");
+    btnOpen.style.display="block";
   }
 });
 
-btnOpen.addEventListener('click', function () {
-  if (navHead.classList.contains('page-header--opened')) {
-    navHead.classList.remove('page-header--opened');
-    navHead.classList.add('page-header--closed');
+btnOpen.addEventListener("click", function () {
+  if (navHead.classList.contains("page-header--opened")) {
+    navHead.classList.remove("page-header--opened");
+    navHead.classList.add("page-header--closed");
   } else {
-    navHead.classList.add('page-header--opened');
-    navHead.classList.remove('page-header--closed');
-    btnOpen.style.display='none';
+    navHead.classList.add("page-header--opened");
+    navHead.classList.remove("page-header--closed");
+    btnOpen.style.display="none";
   }
 });
 
@@ -64,3 +64,8 @@ if (form) {
         successPopup.classList.remove("popup__show");
     })
 }
+
+
+// -----map---------
+var mapjs = document.querySelector(".map__location");
+mapjs.classList.remove("map__location--nojs");
