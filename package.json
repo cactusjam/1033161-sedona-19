@@ -51,6 +51,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-uglify": "^3.0.2",
+    "npm-update-all": "^1.0.1",
     "npx": "^10.2.2",
     "uglify": "^0.1.5"
   }

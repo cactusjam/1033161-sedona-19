@@ -102,6 +102,20 @@
   margin-top: 20px;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @btn-hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: @white;
+  }
+
   @min-width: @tablet-width {
     font-size: 21px;
   }
