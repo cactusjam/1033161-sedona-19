@@ -143,7 +143,19 @@
   width: 100%;
   border: none;
 
+  &:hover,
+  &:focus {
+    background-color: @btn-hover;
+  }
 
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: @white;
+  }
 
   @media (min-width: @tablet-width) {
     width: 458px;

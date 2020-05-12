@@ -14,7 +14,7 @@ btnClose.addEventListener("click", function () {
   } else {
     navHead.classList.add("page-header--closed");
     navHead.classList.remove("page-header--opened");
-    btnOpen.style.display="block";
+    btnOpen.classList.remove("hidden");
   }
 });
 
@@ -25,7 +25,7 @@ btnOpen.addEventListener("click", function () {
   } else {
     navHead.classList.add("page-header--opened");
     navHead.classList.remove("page-header--closed");
-    btnOpen.style.display="none";
+    btnOpen.classList.add("hidden");
   }
 });
 
@@ -39,7 +39,7 @@ if (form) {
   var errorPopup = document.querySelector(".popup--mistake");
   var successPopup = document.querySelector(".popup--done");
 
-  link.addEventListener("click", function(evt) {
+  link.addEventListener("click", function (evt) {
     event.preventDefault();
 
     if (form.checkValidity()) {
@@ -52,20 +52,23 @@ if (form) {
 
   var errorBtn = errorPopup.querySelector(".popup__btn--ok");
 
-  errorBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        errorPopup.classList.remove("popup__show");
-    })
+  errorBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    errorPopup.classList.remove("popup__show");
+  })
 
-    var successBtn = successPopup.querySelector(".popup__btn--close");
+  var successBtn = successPopup.querySelector(".popup__btn--close");
 
-    successBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        successPopup.classList.remove("popup__show");
-    })
+  successBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    successPopup.classList.remove("popup__show");
+  })
 }
 
 
 // -----map---------
 var mapjs = document.querySelector(".map__location");
-mapjs.classList.remove("map__location--nojs");
+
+if (mapjs) {
+  mapjs.classList.remove("map__location--nojs");
+}

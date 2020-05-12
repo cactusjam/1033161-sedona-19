@@ -54,11 +54,30 @@
 
   display: block;
 
+  &[href]:hover,
+  &[href]:focus {
+    background-color: @btn-hover;
+  }
+
+  &[href]:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 26px;
     color: @black;
     padding: 15px 10px 15px 15px;
+
+    &[href]:hover,
+    &[href]:focus, {
+      color: @light-grey-blue;
+      background-color: @white;
+    }
+
+    &[href]:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -76,6 +95,10 @@
   font-size: 0;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .page-header--opened .page-header__btn--closed::before {

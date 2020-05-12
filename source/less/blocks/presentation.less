@@ -260,7 +260,7 @@
     cursor: pointer;
 
     @media (min-width: @tablet-width) {
-      left: 151px;
+      left: 206px;
     }
   }
 
@@ -277,6 +277,7 @@
   padding-left: 25px;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 
   &--replay {
     margin-right: auto;
@@ -303,7 +304,26 @@
 .presentation__video-icon {
   fill: #5c6870;
 
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     fill: @white;
+
+    &:hover,
+    &:focus {
+      fill: @white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
