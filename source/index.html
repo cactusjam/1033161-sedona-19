@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 
   <!-- Pixel Glass -->
   <style>
@@ -34,6 +36,9 @@
 </head>
 
 <body class="page">
+  <div style="display:none">
+    <include src="source/img/sprite.svg"></include>
+  </div>
   <div class="container">
     <header class="page-header">
       <nav class="page-header__nav page-header--closed page-header--nojs">
@@ -67,7 +72,7 @@
           </div>
           <div class="page-header__image page-header__image--index">
             <img class="page-header__image-img page-header__image-img--index" src="../img/text-sedona-index.svg" alt=""
-              width="281px" height="214px">
+              width="281" height="214">
           </div>
         </div>
       </nav>
@@ -88,32 +93,15 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
-            <img class="advantages__img advantages__img--city" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x"
-              alt="Фотография города">
+            <img class="advantages__img advantages__img--city" src="img/main-city-mobile@1x.jpg"
+              srcset="img/main-city-mobile@2x.jpg 2x" alt="Фотография города">
           </picture>
         </div>
         <div class="advantages__recommend">
           <ul class="advantages__recommend-list">
             <li class="advantages__recommend-item advantages__recommend-item--house">
-              <svg class="advantages__recommend-icon advantages__recommend-icon--house" version="1.1" id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="37px" height="36px" viewBox="0 0 74.695 72.346" enable-background="new 0 0 74.695 72.346"
-                xml:space="preserve">
-                <g>
-                  <path d="M29.503,65.345h16V41.407h-16V65.345z M42.566,62.407H32.441V44.345h10.125V62.407z" />
-                  <path
-                    d="M72.62,39.44l2.075-2.078l-9.907-9.913V0.47H50.974v13.161L37.349,0L0,37.363l2.077,2.078l7.832-7.832v37.799H5.971v2.938 h63.875v-2.938h-5.059v-37.8L72.62,39.44z M53.913,3.408h7.938v21.104l-7.938-7.94V3.408z M61.85,69.407H12.846V28.671 L37.348,4.169L61.85,28.671V69.407z" />
-                  <path
-                    d="M29.753,27.21c0,4.28,3.47,7.75,7.75,7.75s7.75-3.47,7.75-7.75c0-4.279-3.47-7.75-7.75-7.75S29.753,22.93,29.753,27.21z M37.503,22.241c2.745,0,4.97,2.225,4.97,4.97s-2.225,4.971-4.97,4.971s-4.97-2.226-4.97-4.971S34.759,22.241,37.503,22.241z" />
-                  <rect x="16.909" y="41.407" width="3" height="3.938" />
-                  <rect x="22.846" y="41.407" width="3" height="3.938" />
-                  <rect x="16.909" y="47.407" width="3" height="3.938" />
-                  <rect x="22.846" y="47.407" width="3" height="3.938" />
-                  <rect x="48.846" y="41.407" width="3" height="3.938" />
-                  <rect x="54.784" y="41.407" width="3" height="3.938" />
-                  <rect x="48.846" y="47.407" width="3" height="3.938" />
-                  <rect x="54.784" y="47.407" width="3" height="3.938" />
-                </g>
+              <svg class="advantages__recommend-icon advantages__recommend-icon--house" width="37" height="36">
+                <use xlink:href="#icon-search"></use>
               </svg>
               <h2 class="advantages__recommend-title">Жилье</h2>
               <p class="advantages__recommend-text advantages__recommend-text--gray">Рекомендуем пожить в настоящем
@@ -128,7 +116,8 @@
                   d="M60.165,22.23h-0.103H35.758c13.604-6.815,14.688-11.115,14.188-13.52c-1.145-3.916-5.604-6.938-9.848-5.341 c-5.484,2.063-7.029,10.262-8.514,16.19C29.69,13.561,27.858,5.91,23.573,2.034c-1.242-1.125-3.049-2.237-5.676-2.003 c-3.965,0.352-9.652,5.317-7.344,10.849c2.217,5.313,9.539,8.67,14.354,11.35H2.834C1.275,22.23,0,23.506,0,25.065V36.25 c0,1.559,1.275,2.834,2.835,2.834h0.27v35.999h56.958V39.084h0.104c1.561,0,2.835-1.275,2.835-2.834V25.065 C63,23.506,61.725,22.23,60.165,22.23z M41.766,5.873c2.07-0.306,4.907,1.283,5.176,3.171c0.386,2.723-3.349,5.192-5.008,6.343 c-2.484,1.723-4.853,2.611-7.178,4.006C35.628,15.748,37.268,6.539,41.766,5.873z M19.232,15.721 c-2.19-1.467-6.444-4.378-6.342-7.678c0.11-3.552,5.655-6.491,8.68-3.839c3.797,3.331,5.625,10.972,7.01,16.357 C25.381,19.042,22.35,17.808,19.232,15.721z M25.114,72.147H6.042V39.084h19.072V72.147z M25.114,36.084H3V25.23h22.114V36.084z  M35.115,72.146h-7.063V25.23h7.063V72.146z M57.125,72.147H38.053V39.084h19.072V72.147z M60,36.084H38.053V25.23H60V36.084z" />
               </svg>
               <h2 class="advantages__recommend-title">Суверины</h2>
-              <p class="advantages__recommend-text advantages__recommend-text--gray advantages__recommend-text--gift">Не только китайского, но&nbsp;и местного
+              <p class="advantages__recommend-text advantages__recommend-text--gray advantages__recommend-text--gift">Не
+                только китайского, но&nbsp;и местного
                 производства!</p>
             </li>
             <li class="advantages__recommend-item advantages__recommend-item--food">
@@ -178,7 +167,7 @@
           <div class="advantages__list advantages__list--gray">
             <h2 class="advantages__list-title">Красивая дорога</h2>
             <span>‒ №4 ‒</span>
-            <p class="advantages__recommend-text advantages__recommend-text--gray">Ехать в Седону из Лас-&nbspВегаса
+            <p class="advantages__recommend-text advantages__recommend-text--gray">Ехать в Седону из Лас-&nbsp;Вегаса
               совсем не&nbsp;скучно!</p>
           </div>
           <div class="advantages__list advantages__list--gray">
@@ -204,15 +193,18 @@
             <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x"
               alt="Фотография города">
           </picture>
-          <iframe class="map__location  map__location--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592636.5105951371!2d-111.93875799303034!3d34.859113787709354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1476197980629" width="1200" height="350" allowfullscreen></iframe>
+          <iframe class="map__location  map__location--nojs"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592636.5105951371!2d-111.93875799303034!3d34.859113787709354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1476197980629"
+            width="1200" height="350" allowfullscreen></iframe>
         </section>
+      </section>
     </main>
     <footer class="page-footer">
       <p class="page-footer__header">#visitsedona</p>
       <ul class="page-footer__social">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="">
-            <svg class="page-footer__social-inc" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <svg class="page-footer__social-inc" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="14px"
               viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
               <g id="W6EeEF_1_">
@@ -249,7 +241,7 @@
         </li>
       </ul>
       <div class="page-footer__copiright">
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"">
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class=" page-footer__copiright-text">Разработано</span>
           <svg class="page-footer__copiright-inc" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px"
@@ -261,6 +253,12 @@
       </div>
     </footer>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
   <script src="js/script.js"></script>
 </body>
 
