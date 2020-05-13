@@ -209,7 +209,7 @@
 
 .presentation__video-controls {
   margin: -46px 20px 0;
-  padding-bottom: 39px;
+  margin-bottom: 39px;
   background-color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
@@ -220,7 +220,7 @@
     z-index: 1;
     margin: 0;
     margin-top: -93px;
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -244,6 +244,10 @@
     @media (min-width: @tablet-width) {
       width: 389px;
       left: 93px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 540px;
     }
   }
 
@@ -277,7 +281,6 @@
   padding-left: 25px;
   background-color: transparent;
   cursor: pointer;
-  outline: none;
 
   &--replay {
     margin-right: auto;
