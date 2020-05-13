@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
 
   <!-- Pixel Glass -->
   <style>
@@ -39,7 +41,7 @@
   </div>
   <div class="container">
     <header class="page-header">
-      <nav class="page-header__nav page-header--closed page-header--nojs">
+      <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="index.html">Главная</a>
@@ -69,7 +71,7 @@
                 class="visually-hidden">Открыть</span></button>
           </div>
           <div class="page-header__image page-header__image--catalog">
-            <img class="page-header__image-img page-header__image-img--catalog" src="../img/text-sedona.svg" alt=""
+            <img class="page-header__image-img page-header__image-img--catalog" src="../img/text-sedona.svg" alt="Sedona"
               width="229" height="39">
           </div>
         </div>
@@ -207,7 +209,8 @@
         </li>
       </ul>
       <div class="page-footer__copiright">
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="HTML Academy">
           <span class=" page-footer__copiright-text">Разработано</span>
           <svg class="page-footer__copiright-inc" width="27" height="34">
             <use xlink:href="#icon-logo-htmlacademy"></use>

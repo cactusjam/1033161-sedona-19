@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-  <link rel="preload" href="fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
 
   <!-- Pixel Glass -->
   <style>
@@ -41,7 +41,7 @@
   </div>
   <div class="container">
     <header class="page-header">
-      <nav class="page-header__nav page-header--closed page-header--nojs">
+      <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link">Главная</a>
@@ -71,8 +71,8 @@
                 class="visually-hidden">Открыть</span></button>
           </div>
           <div class="page-header__image page-header__image--index">
-            <img class="page-header__image-img page-header__image-img--index" src="../img/text-sedona-index.svg" alt=""
-              width="281" height="214">
+            <img class="page-header__image-img page-header__image-img--index" src="../img/text-sedona-index.svg"
+              alt="Sedona" width="281" height="214">
           </div>
         </div>
       </nav>
@@ -90,18 +90,21 @@
             <span>‒ №1 ‒</span>
             <p>Седона не атракцион для туристов, там течет своя жизнь</p>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)"
-              srcset="img/main-city-desktop@1x.webp, img/main-city-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/main-city-tablet@1x.webp, img/main-city-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/main-city-mobile@1x.webp, img/main-city-mobile@2x.webp 2x">
+          <div class="advantages__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/main-city-desktop@1x.webp, img/main-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/main-city-tablet@1x.webp, img/main-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-city-mobile@1x.webp, img/main-city-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
-            <img class="advantages__img advantages__img--city" src="img/main-city-mobile@1x.jpg"
-              srcset="img/main-city-mobile@2x.jpg 2x" alt="Фотография города">
-          </picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
+              <img class="advantages__img advantages__img--city" src="img/main-city-mobile@1x.jpg"
+                srcset="img/main-city-mobile@2x.jpg 2x" alt="Фотография города">
+            </picture>
+          </div>
         </div>
         <div class="advantages__recommend">
           <ul class="advantages__recommend-list">
@@ -138,21 +141,24 @@
             <span>‒ №2 ‒</span>
             <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)"
-              srcset="img/main-bridge-desktop@1x.webp, img/main-bridge-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/main-bridge-tablet@1x.webp, img/main-bridge-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp, img/main-bridge-mobile@2x.webp 2x">
+          <div class="advantages__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/main-bridge-desktop@1x.webp, img/main-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/main-bridge-tablet@1x.webp, img/main-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp, img/main-bridge-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1200px)"
-              srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg 2x">
-            <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x"
-              alt="Фотография города">
-          </picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x"
+                alt="Фотография моста">
+            </picture>
+          </div>
         </div>
-        <div class="advantages__wrapper--gray">
+        <div class="advantages__wrapper advantages__wrapper--gray">
           <div class="advantages__list advantages__list--gray">
             <h2 class="advantages__list-title">Небольшая площадь</h2>
             <span>‒ №3 ‒</span>
@@ -191,8 +197,7 @@
 
             <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg, img/bg-map-tablet@2x.jpg 2x">
-            <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x"
-              alt="Фотография города">
+            <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
           </picture>
           <iframe class="map__location  map__location--nojs"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592636.5105951371!2d-111.93875799303034!3d34.859113787709354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1476197980629"
@@ -204,7 +209,7 @@
       <p class="page-footer__header">#visitsedona</p>
       <ul class="page-footer__social">
         <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="">
+          <a class="page-footer__social-link" href="" aria-label="твиттер">
             <svg class="page-footer__social-inc" width="18" height="14">
               <use xlink:href="#icon-twitter"></use>
             </svg>
@@ -212,7 +217,7 @@
           </a>
         </li>
         <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="">
+          <a class="page-footer__social-link" href="" aria-label="Фейсбук">
             <svg class="page-footer__social-inc" width="9" height="18">
               <use xlink:href="#icon-facebook"></use>
             </svg>
@@ -221,7 +226,7 @@
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="">
-            <svg class="page-footer__social-inc" width="20" height="14">
+            <svg class="page-footer__social-inc" width="20" height="14" aria-label="Ютьюб">
               <use xlink:href="#icon-youtube"></use>
             </svg>
             <span class="visually-hidden">Мы в ютьюбе</span>
@@ -229,7 +234,8 @@
         </li>
       </ul>
       <div class="page-footer__copiright">
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="HTML Academy">
           <span class=" page-footer__copiright-text">Разработано</span>
           <svg class="page-footer__copiright-inc" width="27" height="34">
             <use xlink:href="#icon-logo-htmlacademy"></use>

@@ -1,5 +1,4 @@
 .advantages__wrapper {
-  background-color: @light-grey-blue;
   color: @white;
 
   &--gray {
@@ -18,10 +17,14 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-  }
-
-  @media (min-width: @desktop-width) {
     overflow: hidden;
+  }
+}
+
+.advantages__img-wrapper {
+  background-color: @light-grey-blue;
+
+  @media (min-width: @tablet-width) {
     height: 256px;
   }
 }
@@ -33,6 +36,7 @@
   padding-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
+  background-color: @light-grey-blue;
 
   &:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
@@ -51,14 +55,16 @@
       padding-right: 47px;
       padding-top: 46px;
       padding-bottom: 0;
-      width: calc(100% / 3 * 1 - 94px);
+      width: calc(100% / 3 * 1);
+      box-sizing: border-box;
+      min-height: 256px;
     }
 
     @media (min-width: @desktop-width) {
       padding-top: 53px;
       padding-left: 67px;
       padding-right: 68px;
-      width: calc(100% / 3 * 1 - 135px);
+      width: calc(100% / 3 * 1);
     }
   }
 
@@ -71,15 +77,17 @@
       padding-left: 47px;
       padding-right: 47px;
       padding-top: 46px;
-      width: calc(100% / 3 * 1 - 94px);
+      width: calc(100% / 3 * 1);
       padding-bottom: 0;
+      box-sizing: border-box;
+      min-height: 256px;
     }
 
     @media (min-width: @desktop-width) {
       padding-top: 54px;
       padding-left: 92px;
       padding-right: 93px;
-      width: calc(100% / 3 * 1 - 185px);
+      width: calc(100% / 3 * 1);
     }
   }
 
@@ -87,20 +95,22 @@
     padding-left: 22px;
     padding-right: 22px;
     padding-bottom: 26px;
+    background-color: #eeeeee;
 
     @media (min-width: @tablet-width) {
       padding-left: 48px;
       padding-right: 51px;
       padding-top: 45px;
       padding-bottom: 45px;
-      width: calc(100% / 3 * 1 - 99px);
+      width: calc(100% / 3 * 1);
+      box-sizing: border-box;
     }
 
     @media (min-width: @desktop-width) {
       padding-left: 57px;
       padding-right: 57px;
-      padding-bottom: 65px;
-      width: calc(100% / 3 * 1 - 114px);
+      padding-bottom: 44px;
+      width: calc(100% / 3 * 1);
     }
   }
 }
@@ -116,6 +126,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 22px;
+    margin-bottom: 22px;
   }
 }
 
@@ -232,7 +243,9 @@
     height: auto;
 
     &--city {
-      transform: translateY(-72px);
+      height: auto;
+      margin-top: -75px;
+      transform: none;
     }
   }
 }

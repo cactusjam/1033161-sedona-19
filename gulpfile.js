@@ -140,15 +140,5 @@ gulp.task("clean", function () {
 
 //  build
 
-gulp.task("build", gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html",
-  "script"
-));
-
-
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "script"));
 gulp.task("start", gulp.series("build", "server"));

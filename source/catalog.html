@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -39,7 +40,7 @@
   </div>
   <div class="container">
     <header class="page-header">
-      <nav class="page-header__nav page-header--closed page-header--nojs">
+      <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="index.html">Главная</a>
@@ -185,7 +186,7 @@
                 <source media="(min-width: 768px)"
                   srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
                 <img class="presentation__img" src="img/photo-bridge-mobile@1x.jpg"
-                  srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография дороги">
+                  srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография моста">
               </picture>
             </a>
             <div class="presentation__content-wrapper">
@@ -221,20 +222,20 @@
               alt="Видеопрезентацию">
           </picture>
           <div class="presentation__video-controls">
-            <div class="presentation__video-slide"></div>
-            <button class="presentation__video-btn presentation__video-btn--replay">
+            <div class="presentation__video-slide" aria-label="Перемотка видео"></div>
+            <button class="presentation__video-btn presentation__video-btn--replay" aria-label="Повторить">
               <svg class="presentation__video-icon" width="16" height="20">
                 <use xlink:href="#icon-video-replay"></use>
               </svg>
               <span class="visually-hidden">Повторить</span>
             </button>
-            <button class="presentation__video-btn presentation__video-btn--sub">
+            <button class="presentation__video-btn presentation__video-btn--sub" aria-label="Субтитры">
               <svg class="presentation__video-icon" width="32" height="20">
                 <use xlink:href="#icon-video-subtitles"></use>
               </svg>
               <span class="visually-hidden">Субтитры</span></button>
-            <button class="presentation__video-btn presentation__video-btn--screen">
-              <svg class="presentation__video-icon" version="1.0" width="20" height="20">
+            <button class="presentation__video-btn presentation__video-btn--screen" aria-label="Полноэкранный режим">
+              <svg class="presentation__video-icon" width="20" height="20">
                 <use xlink:href="#icon-video-fullscreen"></use>
               </svg>
               <span class="visually-hidden">Развернуть на весь экран</span></button>
@@ -271,7 +272,8 @@
         </li>
       </ul>
       <div class="page-footer__copiright">
-        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <a class="page-footer__copiright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="HTML Academy">
           <span class=" page-footer__copiright-text">Разработано</span>
           <svg class="page-footer__copiright-inc" width="27" height="34">
             <use xlink:href="#icon-logo-htmlacademy"></use>
