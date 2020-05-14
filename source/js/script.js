@@ -1,31 +1,17 @@
 var navHead = document.querySelector(".page-header__nav");
-var btnClose = document.querySelector(".page-header__btn--closed");
-var btnOpen = document.querySelector(".page-header__btn--opened");
-
+var navBtn = document.querySelector(".page-header__btn");
 
 // ----- меню в шапке-----
 
 navHead.classList.remove("page-header__nav--nojs");
 
-btnClose.addEventListener("click", function () {
+navBtn.addEventListener("click", function () {
   if (navHead.classList.contains("page-header__nav--closed")) {
     navHead.classList.remove("page-header__nav--closed");
     navHead.classList.add("page-header__nav--opened");
   } else {
     navHead.classList.add("page-header__nav--closed");
     navHead.classList.remove("page-header__nav--opened");
-    btnOpen.classList.remove("hidden");
-  }
-});
-
-btnOpen.addEventListener("click", function () {
-  if (navHead.classList.contains("page-header__nav--opened")) {
-    navHead.classList.remove("page-header__nav--opened");
-    navHead.classList.add("page-header__nav--closed");
-  } else {
-    navHead.classList.add("page-header__nav--opened");
-    navHead.classList.remove("page-header__nav--closed");
-    btnOpen.classList.add("hidden");
   }
 });
 

@@ -17,11 +17,12 @@
   <div class="container">
     <header class="page-header">
       <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
+        <button class="page-header__btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="index.html">Главная</a>
-            <button class="page-header__btn page-header__btn--closed"><span
-                class="visually-hidden">Закрыть</span></button>
           </li>
           <li class="page-header__item">
             <a class="page-header__link">Фото и видео</a></li>
@@ -42,8 +43,6 @@
                   alt="Седона - небольшой городок в Аризоне">
               </picture>
             </a>
-            <button class="page-header__btn page-header__btn--opened"><span
-                class="visually-hidden">Открыть</span></button>
           </div>
           <div class="page-header__image page-header__image--catalog">
             <img class="page-header__image-img page-header__image-img--catalog" src="../img/text-sedona.svg"
@@ -83,7 +82,7 @@
                 <h3 class="presentation__content-title">Hеродные просторы</h3>
                 <span class="presentation__content-author">Автор фото: Борис</span>
               </div>
-              <button class="presentation__likes">
+              <button class="presentation__likes" type="button">
                 <svg class="presentation__icon" width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
@@ -112,7 +111,7 @@
                 <h3 class="presentation__content-title">Местная растительность</h3>
                 <span class="presentation__content-author">Автор фото: Сергей</span>
               </div>
-              <button class="presentation__likes">
+              <button class="presentation__likes" type="button">
                 <svg class="presentation__icon" width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
@@ -141,7 +140,7 @@
                 <h3 class="presentation__content-title">Дорога на север</h3>
                 <span class="presentation__content-author">Автор фото: Петр</span>
               </div>
-              <button class="presentation__likes">
+              <button class="presentation__likes" type="button">
                 <svg class="presentation__icon" width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
@@ -170,7 +169,7 @@
                 <h3 class="presentation__content-title">Мост дьявола</h3>
                 <span class="presentation__content-author">Автор фото: Антон</span>
               </div>
-              <button class="presentation__likes">
+              <button class="presentation__likes" type="button">
                 <svg class="presentation__icon" width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
@@ -199,18 +198,18 @@
           </picture>
           <div class="presentation__video-controls">
             <div class="presentation__video-slide" aria-label="Перемотка видео"></div>
-            <button class="presentation__video-btn presentation__video-btn--replay" aria-label="Повторить">
+            <button class="presentation__video-btn presentation__video-btn--replay" type="button" aria-label="Повторить">
               <svg class="presentation__video-icon" width="16" height="20">
                 <use xlink:href="#icon-video-replay"></use>
               </svg>
               <span class="visually-hidden">Повторить</span>
             </button>
-            <button class="presentation__video-btn presentation__video-btn--sub" aria-label="Субтитры">
+            <button class="presentation__video-btn presentation__video-btn--sub" type="button" aria-label="Субтитры">
               <svg class="presentation__video-icon" width="32" height="20">
                 <use xlink:href="#icon-video-subtitles"></use>
               </svg>
               <span class="visually-hidden">Субтитры</span></button>
-            <button class="presentation__video-btn presentation__video-btn--screen" aria-label="Полноэкранный режим">
+            <button class="presentation__video-btn presentation__video-btn--screen" type="button" aria-label="Полноэкранный режим">
               <svg class="presentation__video-icon" width="20" height="20">
                 <use xlink:href="#icon-video-fullscreen"></use>
               </svg>

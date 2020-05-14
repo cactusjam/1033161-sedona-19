@@ -16,6 +16,10 @@
   }
 }
 
+.page-header__nav {
+  position: relative;
+}
+
 .page-header__item {
   list-style: none;
   position: relative;
@@ -70,7 +74,8 @@
     padding: 15px 10px 15px 15px;
 
     &[href]:hover,
-    &[href]:focus, {
+    &[href]:focus,
+      {
       color: @light-grey-blue;
       background-color: @white;
     }
@@ -94,37 +99,10 @@
   border: 0;
   font-size: 0;
   background-color: transparent;
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.page-header__nav--opened .page-header__btn--closed::before {
-  content: "";
-  position: absolute;
   background-image: url("../img/icon-cross.svg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  top: 0;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.page-header__nav--closed .page-header__btn--opened::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  top: 0;
+  cursor: pointer;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -166,7 +144,7 @@
   background-color: @light-grey-blue;
 
   @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+  (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 
@@ -174,7 +152,7 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
@@ -184,7 +162,7 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
@@ -268,15 +246,20 @@
 }
 
 @media (max-width: @mobile-max-width) {
+  .page-header__nav--closed .page-header__btn {
+    right: 20px;
+    bottom: 53px;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+  }
+
   .page-header__nav--opened .page-header__list {
     display: block;
   }
 
   .page-header__nav--closed .page-header__list {
-    display: none;
-  }
-
-  .page-header__nav--nojs .page-header__btn {
     display: none;
   }
 

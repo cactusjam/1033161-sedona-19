@@ -17,11 +17,12 @@
   <div class="container">
     <header class="page-header">
       <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs">
+        <button class="page-header__btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link" href="index.html">Главная</a>
-            <button class="page-header__btn page-header__btn--closed"><span
-                class="visually-hidden">Закрыть</span></button>
           </li>
           <li class="page-header__item">
             <a class="page-header__link" href="catalog.html">Фото и видео</a></li>
@@ -42,8 +43,6 @@
                   alt="Седона - небольшой городок в Аризоне">
               </picture>
             </a>
-            <button class="page-header__btn page-header__btn--opened"><span
-                class="visually-hidden">Открыть</span></button>
           </div>
           <div class="page-header__image page-header__image--catalog">
             <img class="page-header__image-img page-header__image-img--catalog" src="../img/text-sedona.svg" alt="Sedona"
@@ -149,7 +148,7 @@
             placeholder="Опишите подробно все свои восторги"></textarea>
         </div>
         <div class="review-form__bottom-wrapper">
-          <a class="review-form__btn" href="#">Отправить отзыв</a>
+          <button class="review-form__btn" href="#" type="submit">Отправить отзыв</button>
           <span class="review-form__message">* — обязательные поля</span>
         </div>
       </form>
@@ -201,7 +200,7 @@
       <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
       <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     </div>
-    <button class="popup__btn popup__btn--ok">Ok</button>
+    <button class="popup__btn popup__btn--ok" type="button">Ok</button>
   </div>
 
   <div class="popup popup--done">
@@ -210,7 +209,7 @@
       <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В ближайшее время мы опубликуем его на сайте.</p>
     </div>
-    <button class="popup__btn popup__btn--close">Закрыть окно</button>
+    <button class="popup__btn popup__btn--close" type="button">Закрыть окно</button>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
