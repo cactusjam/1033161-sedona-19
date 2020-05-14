@@ -249,6 +249,8 @@
 
     @media (min-width: @desktop-width) {
       display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 0;
     }
   }
 
@@ -349,8 +351,9 @@
       box-sizing: border-box;
       width: 50%;
       margin-bottom: 0;
+      padding-bottom: 16px;
 
-      &:first-child {
+      &:nth-child(odd) {
         padding-right: 79px;
       }
 
